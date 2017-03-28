@@ -1,0 +1,137 @@
+body {
+    background: #edeef0;
+}
+.disp{
+  &-b{ display: block; }
+  &-i{ display: inline; }
+  &-ib{ display: inline-block; }
+}
+.relative{position: relative};
+.absolute{position: absolute};
+
+// :host {
+//   flex: 1 1 100%;
+//   display: flex;
+//   flex-flow: column;
+// }
+
+$flexLength: (5,10,15,20,25,30,33,35,40,45,50,55,60,65,66,70,75,80,85,90,95,100);
+$numbers: (4,8,12,16,20);
+
+$flexTypes: ('row','column');
+$mainPositions: ('start','end','center','space-between','space-around');
+$addPositions: ('start','end','center');
+
+@each $type in $flexTypes {
+  .layout{
+    &-#{$type}{
+      display: flex;
+      flex-direction: #{$type};
+      & > .flex{
+        flex: 1 1 0%;
+          @if ($type == 'row') {
+            &_5{flex: 1 1 5%;max-width:5%;}
+            &_10{flex: 1 1 10%;max-width:10%;}
+            &_15{flex: 1 1 15%;max-width:15%;}
+            &_20{flex: 1 1 20%;max-width:20%;}
+            &_25{flex: 1 1 25%;max-width:25%;}
+            &_30{flex: 1 1 30%;max-width:30%;}
+            &_33{flex: 1 1 33.33%;max-width:33.33%;}
+            &_35{flex: 1 1 35%;max-width:35%;}
+            &_40{flex: 1 1 40%;max-width:40%;}
+            &_45{flex: 1 1 45%;max-width:45%;}
+            &_50{flex: 1 1 50%;max-width:50%;}
+            &_55{flex: 1 1 55%;max-width:55%;}
+            &_60{flex: 1 1 60%;max-width:60%;}
+            &_65{flex: 1 1 65%;max-width:65%;}
+            &_66{flex: 1 1 66.66%;max-width:66.66%;}
+            &_70{flex: 1 1 70%;max-width:70%;}
+            &_75{flex: 1 1 75%;max-width:75%;}
+            &_80{flex: 1 1 80%;max-width:80%;}
+            &_85{flex: 1 1 85%;max-width:85%;}
+            &_90{flex: 1 1 90%;max-width:90%;}
+            &_95{flex: 1 1 95%;max-width:95%;}
+            &_100{flex: 1 1 100%;max-width:100%;}            
+         /* Какая-то проблема с компилятором: после вставки значения писал ошибку на символ процента. Пришлось вручную прописать значения */
+            // @if ($l == 33) {
+            //   flex: 1 1 33.33%;max-width:33.33%;
+            // } @else if ($l == 66) {
+            //   flex: 1 1 66.66%;max-width:66.66%;
+            // } @else {
+            //   flex: 1 1 #{$l}%;max-width:#{$l}%;
+            // }
+          } @else {
+            &_5{flex: 1 1 5%;max-height:5%;}
+            &_10{flex: 1 1 10%;max-height:10%;}
+            &_15{flex: 1 1 15%;max-height:15%;}
+            &_20{flex: 1 1 20%;max-height:20%;}
+            &_25{flex: 1 1 25%;max-height:25%;}
+            &_30{flex: 1 1 30%;max-height:30%;}
+            &_33{flex: 1 1 33.33%;max-height:33.33%;}
+            &_35{flex: 1 1 35%;max-height:35%;}
+            &_40{flex: 1 1 40%;max-height:40%;}
+            &_45{flex: 1 1 45%;max-height:45%;}
+            &_50{flex: 1 1 50%;max-height:50%;}
+            &_55{flex: 1 1 55%;max-height:55%;}
+            &_60{flex: 1 1 60%;max-height:60%;}
+            &_65{flex: 1 1 65%;max-height:65%;}
+            &_66{flex: 1 1 66.66%;max-height:66.66%;}
+            &_70{flex: 1 1 70%;max-height:70%;}
+            &_75{flex: 1 1 75%;max-height:75%;}
+            &_80{flex: 1 1 80%;max-height:80%;}
+            &_85{flex: 1 1 85%;max-height:85%;}
+            &_90{flex: 1 1 90%;max-height:90%;}
+            &_95{flex: 1 1 95%;max-height:95%;}
+            &_100{flex: 1 1 100%;max-height:100%;}
+          
+        }
+      }
+    }
+  }
+}
+.layout-align{
+  @each $main in $mainPositions {
+    @each $add in $addPositions {
+      &-#{$main}-#{$add}{
+        @if ($main == 'start') {
+          justify-content: flex-#{$main};
+        } @else if ($main == 'end') {
+          justify-content: flex-#{$main};
+        } @else {
+          justify-content: #{$main};  
+        }
+        @if ($add == 'start') {
+          align-items: flex-#{$add};
+        } @else if ($add == 'end') {
+          align-items: flex-#{$add};
+        } @else {
+          align-items: #{$add};  
+        }
+      }
+    }
+  }
+}
+
+@each $val in $numbers {
+  .m#{$val} {margin: #{$val}px;}
+  .mh#{$val} {margin-left: #{$val}px;margin-right: #{$val}px;}
+  .mv#{$val} {margin-top: #{$val}px;margin-bottom: #{$val}px;}
+  .mb#{$val} {margin-bottom: #{$val}px;}
+  .mt#{$val} {margin-top: #{$val}px;}
+  .ml#{$val} {margin-left: #{$val}px;}
+  .mr#{$val} {margin-right: #{$val}px;}
+  
+  .p#{$val} {padding: #{$val}px;}
+  .ph#{$val} {padding-left: #{$val}px;padding-right: #{$val}px;}
+  .pv#{$val} {padding-top: #{$val}px;padding-bottom: #{$val}px;}
+  .pb#{$val} {padding-bottom: #{$val}px;}
+  .pt#{$val} {padding-top: #{$val}px;}
+  .pl#{$val} {padding-left: #{$val}px;}
+  .pr#{$val} {padding-right: #{$val}px;}
+}
+
+.h{
+  &_100{
+    height: 100%;
+  }
+}

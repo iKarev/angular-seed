@@ -2,20 +2,23 @@
   background-color: #106cc8;
   color: rgba(255, 255, 255, 0.87);
   display: block;
-  height: 48px;
+  height: 36px;
   padding: 0 16px;
 }
 
 h1 {
-  display: inline;
+  display: block;
   font-size: 20px;
   font-weight: normal;
   letter-spacing: 0.1px;
-  line-height: 48px;
+  line-height: 36px;
+  margin: 0;
+  padding-left: 5%;
+  background: $blue;
+  color: $white;
 }
 
 .more {
-  background: url("./assets/svg/more.svg");
   float: right;
   height: 24px;
   margin-top: 12px;

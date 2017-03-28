@@ -1,0 +1,58 @@
+sd-users{
+  margin: 0 5% 30px;
+  width: 90%;
+  display: block;
+  & .users{
+    &__title{
+      margin: 0;
+      text-align: center;
+    }
+    &__list{
+      padding: 0;
+      &-item{
+        padding: 3px 5px;
+        margin: 0;
+        &:hover{
+          background: #e1e5eb;
+        }
+        &_link{
+          padding: 3px 5px;
+          display: block;
+          width: 100%;
+          height: 100%;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &__new{
+      &_form{
+        &-input{
+          display: inline-block;
+          max-width: 100%;
+          width: 100%;
+        }
+        &-error{
+          color: $darkred;
+        }
+        &-group{
+          &-title{
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &__map{
+      background: $white;
+      border-radius: 3px;
+      box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+      margin-left: 5%;
+    }
+    &__add{
+      &_link{
+        margin-left: 10px;
+      }
+    }
+  }
+}

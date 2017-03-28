@@ -2,12 +2,20 @@
   border: 0 solid #e1e1e1;
   border-bottom-width: 1px;
   display: block;
-  height: 48px;
+  height: 20px;
   padding: 0 16px;
 }
 
+sd-navbar{
+  margin-bottom: 20px;
+  display: block;
+  padding-left: 5%;
+  background: $blue;
+  color: $white;
+}
+
 nav a {
-  color: #8f8f8f;
+  color: $white;
   font-size: 14px;
   font-weight: 500;
   line-height: 48px;
@@ -15,8 +23,13 @@ nav a {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: none !important;
+  &:hover, &:focus {
+    color:#e1e1e1 !important;
+  }
 }
 
 nav a.router-link-active {
-  color: #106cc8;
+  background: rgba(255,255,255,.2);
 }

@@ -1,6 +1,10 @@
 import * as gulp from 'gulp';
 import * as util from 'gulp-util';
 import * as runSequence from 'run-sequence';
+// import * as watch from 'gulp-watch';
+import * as sass from 'gulp-sass';
+// var watch = require('gulp-watch');
+//     sass = require('gulp-sass')
 
 import Config from './tools/config';
 import { loadTasks, loadCompositeTasks } from './tools/utils';
@@ -24,5 +28,15 @@ gulp.task('clean.once', (done: any) => {
     util.log('Skipping clean on rebuild');
     done();
   }
+});
+
+gulp.task('sass', function () {
+  gulp.src('./src/client/assets/styles/main.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./src/client/assets/styles'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./src/**/*.scss', ['sass']);
 });
 

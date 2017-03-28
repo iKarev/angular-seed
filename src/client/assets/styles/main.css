@@ -1,0 +1,570 @@
+@charset "UTF-8";
+body {
+  background: #edeef0; }
+
+.disp-b {
+  display: block; }
+
+.disp-i {
+  display: inline; }
+
+.disp-ib {
+  display: inline-block; }
+
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }
+
+.layout-row {
+  display: flex;
+  flex-direction: row; }
+  .layout-row > .flex {
+    flex: 1 1 0%;
+    /* Какая-то проблема с компилятором: после вставки значения писал ошибку на символ процента. Пришлось вручную прописать значения */ }
+    .layout-row > .flex_5 {
+      flex: 1 1 5%;
+      max-width: 5%; }
+    .layout-row > .flex_10 {
+      flex: 1 1 10%;
+      max-width: 10%; }
+    .layout-row > .flex_15 {
+      flex: 1 1 15%;
+      max-width: 15%; }
+    .layout-row > .flex_20 {
+      flex: 1 1 20%;
+      max-width: 20%; }
+    .layout-row > .flex_25 {
+      flex: 1 1 25%;
+      max-width: 25%; }
+    .layout-row > .flex_30 {
+      flex: 1 1 30%;
+      max-width: 30%; }
+    .layout-row > .flex_33 {
+      flex: 1 1 33.33%;
+      max-width: 33.33%; }
+    .layout-row > .flex_35 {
+      flex: 1 1 35%;
+      max-width: 35%; }
+    .layout-row > .flex_40 {
+      flex: 1 1 40%;
+      max-width: 40%; }
+    .layout-row > .flex_45 {
+      flex: 1 1 45%;
+      max-width: 45%; }
+    .layout-row > .flex_50 {
+      flex: 1 1 50%;
+      max-width: 50%; }
+    .layout-row > .flex_55 {
+      flex: 1 1 55%;
+      max-width: 55%; }
+    .layout-row > .flex_60 {
+      flex: 1 1 60%;
+      max-width: 60%; }
+    .layout-row > .flex_65 {
+      flex: 1 1 65%;
+      max-width: 65%; }
+    .layout-row > .flex_66 {
+      flex: 1 1 66.66%;
+      max-width: 66.66%; }
+    .layout-row > .flex_70 {
+      flex: 1 1 70%;
+      max-width: 70%; }
+    .layout-row > .flex_75 {
+      flex: 1 1 75%;
+      max-width: 75%; }
+    .layout-row > .flex_80 {
+      flex: 1 1 80%;
+      max-width: 80%; }
+    .layout-row > .flex_85 {
+      flex: 1 1 85%;
+      max-width: 85%; }
+    .layout-row > .flex_90 {
+      flex: 1 1 90%;
+      max-width: 90%; }
+    .layout-row > .flex_95 {
+      flex: 1 1 95%;
+      max-width: 95%; }
+    .layout-row > .flex_100 {
+      flex: 1 1 100%;
+      max-width: 100%; }
+
+.layout-column {
+  display: flex;
+  flex-direction: column; }
+  .layout-column > .flex {
+    flex: 1 1 0%; }
+    .layout-column > .flex_5 {
+      flex: 1 1 5%;
+      max-height: 5%; }
+    .layout-column > .flex_10 {
+      flex: 1 1 10%;
+      max-height: 10%; }
+    .layout-column > .flex_15 {
+      flex: 1 1 15%;
+      max-height: 15%; }
+    .layout-column > .flex_20 {
+      flex: 1 1 20%;
+      max-height: 20%; }
+    .layout-column > .flex_25 {
+      flex: 1 1 25%;
+      max-height: 25%; }
+    .layout-column > .flex_30 {
+      flex: 1 1 30%;
+      max-height: 30%; }
+    .layout-column > .flex_33 {
+      flex: 1 1 33.33%;
+      max-height: 33.33%; }
+    .layout-column > .flex_35 {
+      flex: 1 1 35%;
+      max-height: 35%; }
+    .layout-column > .flex_40 {
+      flex: 1 1 40%;
+      max-height: 40%; }
+    .layout-column > .flex_45 {
+      flex: 1 1 45%;
+      max-height: 45%; }
+    .layout-column > .flex_50 {
+      flex: 1 1 50%;
+      max-height: 50%; }
+    .layout-column > .flex_55 {
+      flex: 1 1 55%;
+      max-height: 55%; }
+    .layout-column > .flex_60 {
+      flex: 1 1 60%;
+      max-height: 60%; }
+    .layout-column > .flex_65 {
+      flex: 1 1 65%;
+      max-height: 65%; }
+    .layout-column > .flex_66 {
+      flex: 1 1 66.66%;
+      max-height: 66.66%; }
+    .layout-column > .flex_70 {
+      flex: 1 1 70%;
+      max-height: 70%; }
+    .layout-column > .flex_75 {
+      flex: 1 1 75%;
+      max-height: 75%; }
+    .layout-column > .flex_80 {
+      flex: 1 1 80%;
+      max-height: 80%; }
+    .layout-column > .flex_85 {
+      flex: 1 1 85%;
+      max-height: 85%; }
+    .layout-column > .flex_90 {
+      flex: 1 1 90%;
+      max-height: 90%; }
+    .layout-column > .flex_95 {
+      flex: 1 1 95%;
+      max-height: 95%; }
+    .layout-column > .flex_100 {
+      flex: 1 1 100%;
+      max-height: 100%; }
+
+.layout-align-start-start {
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.layout-align-start-end {
+  justify-content: flex-start;
+  align-items: flex-end; }
+
+.layout-align-start-center {
+  justify-content: flex-start;
+  align-items: center; }
+
+.layout-align-end-start {
+  justify-content: flex-end;
+  align-items: flex-start; }
+
+.layout-align-end-end {
+  justify-content: flex-end;
+  align-items: flex-end; }
+
+.layout-align-end-center {
+  justify-content: flex-end;
+  align-items: center; }
+
+.layout-align-center-start {
+  justify-content: center;
+  align-items: flex-start; }
+
+.layout-align-center-end {
+  justify-content: center;
+  align-items: flex-end; }
+
+.layout-align-center-center {
+  justify-content: center;
+  align-items: center; }
+
+.layout-align-space-between-start {
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.layout-align-space-between-end {
+  justify-content: space-between;
+  align-items: flex-end; }
+
+.layout-align-space-between-center {
+  justify-content: space-between;
+  align-items: center; }
+
+.layout-align-space-around-start {
+  justify-content: space-around;
+  align-items: flex-start; }
+
+.layout-align-space-around-end {
+  justify-content: space-around;
+  align-items: flex-end; }
+
+.layout-align-space-around-center {
+  justify-content: space-around;
+  align-items: center; }
+
+.m4 {
+  margin: 4px; }
+
+.mh4 {
+  margin-left: 4px;
+  margin-right: 4px; }
+
+.mv4 {
+  margin-top: 4px;
+  margin-bottom: 4px; }
+
+.mb4 {
+  margin-bottom: 4px; }
+
+.mt4 {
+  margin-top: 4px; }
+
+.ml4 {
+  margin-left: 4px; }
+
+.mr4 {
+  margin-right: 4px; }
+
+.p4 {
+  padding: 4px; }
+
+.ph4 {
+  padding-left: 4px;
+  padding-right: 4px; }
+
+.pv4 {
+  padding-top: 4px;
+  padding-bottom: 4px; }
+
+.pb4 {
+  padding-bottom: 4px; }
+
+.pt4 {
+  padding-top: 4px; }
+
+.pl4 {
+  padding-left: 4px; }
+
+.pr4 {
+  padding-right: 4px; }
+
+.m8 {
+  margin: 8px; }
+
+.mh8 {
+  margin-left: 8px;
+  margin-right: 8px; }
+
+.mv8 {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+.mb8 {
+  margin-bottom: 8px; }
+
+.mt8 {
+  margin-top: 8px; }
+
+.ml8 {
+  margin-left: 8px; }
+
+.mr8 {
+  margin-right: 8px; }
+
+.p8 {
+  padding: 8px; }
+
+.ph8 {
+  padding-left: 8px;
+  padding-right: 8px; }
+
+.pv8 {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+.pb8 {
+  padding-bottom: 8px; }
+
+.pt8 {
+  padding-top: 8px; }
+
+.pl8 {
+  padding-left: 8px; }
+
+.pr8 {
+  padding-right: 8px; }
+
+.m12 {
+  margin: 12px; }
+
+.mh12 {
+  margin-left: 12px;
+  margin-right: 12px; }
+
+.mv12 {
+  margin-top: 12px;
+  margin-bottom: 12px; }
+
+.mb12 {
+  margin-bottom: 12px; }
+
+.mt12 {
+  margin-top: 12px; }
+
+.ml12 {
+  margin-left: 12px; }
+
+.mr12 {
+  margin-right: 12px; }
+
+.p12 {
+  padding: 12px; }
+
+.ph12 {
+  padding-left: 12px;
+  padding-right: 12px; }
+
+.pv12 {
+  padding-top: 12px;
+  padding-bottom: 12px; }
+
+.pb12 {
+  padding-bottom: 12px; }
+
+.pt12 {
+  padding-top: 12px; }
+
+.pl12 {
+  padding-left: 12px; }
+
+.pr12 {
+  padding-right: 12px; }
+
+.m16 {
+  margin: 16px; }
+
+.mh16 {
+  margin-left: 16px;
+  margin-right: 16px; }
+
+.mv16 {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.mb16 {
+  margin-bottom: 16px; }
+
+.mt16 {
+  margin-top: 16px; }
+
+.ml16 {
+  margin-left: 16px; }
+
+.mr16 {
+  margin-right: 16px; }
+
+.p16 {
+  padding: 16px; }
+
+.ph16 {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.pv16 {
+  padding-top: 16px;
+  padding-bottom: 16px; }
+
+.pb16 {
+  padding-bottom: 16px; }
+
+.pt16 {
+  padding-top: 16px; }
+
+.pl16 {
+  padding-left: 16px; }
+
+.pr16 {
+  padding-right: 16px; }
+
+.m20 {
+  margin: 20px; }
+
+.mh20 {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.mv20 {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.ml20 {
+  margin-left: 20px; }
+
+.mr20 {
+  margin-right: 20px; }
+
+.p20 {
+  padding: 20px; }
+
+.ph20 {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.pv20 {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.pb20 {
+  padding-bottom: 20px; }
+
+.pt20 {
+  padding-top: 20px; }
+
+.pl20 {
+  padding-left: 20px; }
+
+.pr20 {
+  padding-right: 20px; }
+
+.h_100 {
+  height: 100%; }
+
+:host {
+  display: block;
+  padding: 0 17px; }
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  margin-bottom: 0;
+  margin-top: 0.83em; }
+
+:host {
+  display: block;
+  padding: 0 16px; }
+
+input {
+  width: 250px; }
+
+ul {
+  list-style-type: none;
+  padding: 0 0 0 8px; }
+
+sd-users {
+  margin: 0 5% 30px;
+  width: 90%;
+  display: block; }
+  sd-users .users__title {
+    margin: 0;
+    text-align: center; }
+  sd-users .users__list {
+    padding: 0; }
+    sd-users .users__list-item {
+      padding: 3px 5px;
+      margin: 0; }
+      sd-users .users__list-item:hover {
+        background: #e1e5eb; }
+      sd-users .users__list-item_link {
+        padding: 3px 5px;
+        display: block;
+        width: 100%;
+        height: 100%; }
+        sd-users .users__list-item_link:hover {
+          text-decoration: none; }
+  sd-users .users__new_form-input {
+    display: inline-block;
+    max-width: 100%;
+    width: 100%; }
+  sd-users .users__new_form-error {
+    color: darkred; }
+  sd-users .users__new_form-group-title {
+    display: inline-block; }
+  sd-users .users__map {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    margin-left: 5%; }
+  sd-users .users__add_link {
+    margin-left: 10px; }
+
+:host {
+  border: 0 solid #e1e1e1;
+  border-bottom-width: 1px;
+  display: block;
+  height: 20px;
+  padding: 0 16px; }
+
+sd-navbar {
+  margin-bottom: 20px;
+  display: block;
+  padding-left: 5%;
+  background: #3367d6;
+  color: #fff; }
+
+nav a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 48px;
+  margin-right: 20px;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: none !important; }
+  nav a:hover, nav a:focus {
+    color: #e1e1e1 !important; }
+
+nav a.router-link-active {
+  background: rgba(255, 255, 255, 0.2); }
+
+:host {
+  background-color: #106cc8;
+  color: rgba(255, 255, 255, 0.87);
+  display: block;
+  height: 36px;
+  padding: 0 16px; }
+
+h1 {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.1px;
+  line-height: 36px;
+  margin: 0;
+  padding-left: 5%;
+  background: #3367d6;
+  color: #fff; }
+
+.more {
+  float: right;
+  height: 24px;
+  margin-top: 12px;
+  width: 24px; }
